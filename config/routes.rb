@@ -1,8 +1,9 @@
 Rails3SubdomainDevise::Application.routes.draw do
+  get "user/index"
+  get "user/show"
   devise_for :users
-
+  resources :users, :only => [:index, :show]
   get "home/index"
-
   root :to => "home#index"
 
   # The priority is based upon order of creation:
