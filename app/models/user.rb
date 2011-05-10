@@ -11,4 +11,7 @@ class User < ActiveRecord::Base
   validates_presence_of :name
   validates_uniqueness_of :name, :email, :case_sensitive => false
   has_friendly_id :name, :use_slug => true, :strip_non_ascii => true
+
+  # a user has many subdomains
+  has_many :subdomains, :dependent => :destroy
 end
