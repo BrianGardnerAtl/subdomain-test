@@ -3,7 +3,10 @@ Rails3SubdomainDevise::Application.routes.draw do
   get "users/index"
   get "users/show"
   devise_for :users
-  resources :users, :only => [:index, :show]
+  resources :users, :only => [:index, :show] do
+    # use shallow routes to simplify urls
+    resources :subdomains, :shallow => true
+  end
   root :to => "home#index"
 
   # The priority is based upon order of creation:
