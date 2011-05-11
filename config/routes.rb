@@ -8,6 +8,7 @@ Rails3SubdomainDevise::Application.routes.draw do
     # use shallow routes to simplify urls
     resources :subdomains, :shallow => true
   end
+  match '/' => 'home#index', :constraints => { :subdomain => 'www' }
   match '/' => 'sites#show', :constraints => { :subdomain => /.+/ }
   root :to => "home#index"
 
