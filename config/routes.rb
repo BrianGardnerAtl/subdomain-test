@@ -1,4 +1,5 @@
 Rails3SubdomainDevise::Application.routes.draw do
+  get "sites/show"
   get "home/index"
   get "users/index"
   get "users/show"
@@ -7,6 +8,7 @@ Rails3SubdomainDevise::Application.routes.draw do
     # use shallow routes to simplify urls
     resources :subdomains, :shallow => true
   end
+  match '/' => 'sites#show', :constraints => { :subdomain => /.+/ }
   root :to => "home#index"
 
   # The priority is based upon order of creation:

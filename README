@@ -1,2 +1,5 @@
 This is a test application using blog-style subdomains and using devise
 for authentication.
+
+I created this application following the tutorial found here:
+https://github.com/fortuity/rails3-subdomain-devise/wiki/Tutorial-%28Walkthrough%29
