@@ -4,6 +4,7 @@ gem 'rails', '3.0.4'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'devise', '1.2.rc'
 gem 'friendly_id', '3.2.1'
+gem 'heroku'
 
 # Use unicorn as the web server
 # gem 'unicorn'
